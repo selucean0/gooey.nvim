@@ -140,7 +140,7 @@ function M.load()
     fg = colors.baseForeground,
     bg = colors.baseBackground,
     nc_fg = colors.baseForeground,
-    float_bg = colors.lowActiveBackground,
+    float_bg = colors.lowBackground,
   }
 
   if opts.transparent_background then
