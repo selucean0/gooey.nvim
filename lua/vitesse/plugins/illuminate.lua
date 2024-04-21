@@ -1,11 +1,11 @@
 return function(_)
   local colors = require("colorbuddy.init").colors
   local Group = require("colorbuddy.init").Group
-  local link = require("vitesse.utils").highlight_link
+  local hl = require("vitesse.util").hl
 
   Group.new("IlluminatedWord", colors.none, colors.ignored)
-  link("IlluminatedCurWord", "IlluminatedWord")
-  link("IlluminatedWordText", "IlluminatedWord")
-  link("IlluminatedWordRead", "IlluminatedWord")
-  link("IlluminatedWordWrite", "IlluminatedWord")
+  hl("IlluminatedCurWord", { link = "IlluminatedWord" })
+  hl("IlluminatedWordText", { link = "IlluminatedWord" })
+  hl("IlluminatedWordRead", { link = "IlluminatedWord" })
+  hl("IlluminatedWordWrite", { link = "IlluminatedWord" })
 end

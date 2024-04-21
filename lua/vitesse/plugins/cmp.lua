@@ -4,7 +4,7 @@ return function(opts)
   local Group = require("colorbuddy.init").Group
   local groups = require("colorbuddy.init").groups
   local styles = require("colorbuddy.init").styles
-  local link = require("vitesse.utils").highlight_link
+  local hl = require("vitesse.util").hl
 
   Color.new("codeium", "#09B6A2")
 
@@ -28,21 +28,21 @@ return function(opts)
   Group.new("CmpItemKindCodeium", colors.codeium, colors.none, styles.none)
   Group.new("CmpItemKindDefault", colors.blue, colors.none, styles.none)
 
-  link("CmpItemKindText", "@text")
-  link("CmpItemKindMethod", "@method")
-  link("CmpItemKindFunction", "@function")
-  link("CmpItemKindConstructor", "@constructor")
-  link("CmpItemKindField", "@field")
-  link("CmpItemKindVariable", "@variable")
-  link("CmpitemKindClass", "@class")
-  link("CmpItemKindInterface", "@interface")
-  link("CmpItemKindProperty", "@property")
-  link("CmpItemKindKeyword", "@keyword")
-  link("CmpItemKindReference", "@text.reference")
-  link("CmpItemKindEnumMember", "@type")
-  link("CmpItemKindConstant", "@constant")
-  link("CmpItemKindOperator", "@operator")
-  link("CmpItemKindTypeParameter", "@type")
+  hl("CmpItemKindText", { link = "@text" })
+  hl("CmpItemKindMethod", { link = "@method" })
+  hl("CmpItemKindFunction", { link = "@function" })
+  hl("CmpItemKindConstructor", { link = "@constructor" })
+  hl("CmpItemKindField", { link = "@field" })
+  hl("CmpItemKindVariable", { link = "@variable" })
+  hl("CmpitemKindClass", { link = "@class" })
+  hl("CmpItemKindInterface", { link = "@interface" })
+  hl("CmpItemKindProperty", { link = "@property" })
+  hl("CmpItemKindKeyword", { link = "@keyword" })
+  hl("CmpItemKindReference", { link = "@text.reference" })
+  hl("CmpItemKindEnumMember", { link = "@type" })
+  hl("CmpItemKindConstant", { link = "@constant" })
+  hl("CmpItemKindOperator", { link = "@operator" })
+  hl("CmpItemKindTypeParameter", { link = "@type" })
 
   if opts.cmp_cmdline_disable_search_highlight_group then
     local group = vim.api.nvim_create_augroup("vitesse_cmp_cmdline_disable_search_highlight_group", { clear = true })

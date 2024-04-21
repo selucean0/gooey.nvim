@@ -3,7 +3,7 @@ return function(_)
   local colors = require("colorbuddy.init").colors
   local groups = require("colorbuddy.init").groups
   local styles = require("colorbuddy.init").styles
-  local link = require("vitesse.utils").highlight_link
+  local hl = require("vitesse.util").hl
 
   Group.new("@tag", colors.green)
   Group.new("@tag.attribute", colors.property)
@@ -43,7 +43,7 @@ return function(_)
 
   Group.link("@constructor", groups.Function)
 
-  link("@parameter", "@variable")
+  hl("@parameter", { link = "@variable" })
 
   Group.link("@keyword", groups.Keyword)
   Group.link("@keyword.function", groups.Operator)
@@ -54,18 +54,18 @@ return function(_)
   Group.link("@repeat", groups.Repeat)
   Group.link("@debug", groups.Debug)
   Group.link("@label", groups.Label)
-  link("@include", "@keyword")
+  hl("@include", { link = "@keyword" })
   Group.link("@exception", groups.Exception)
 
   Group.link("@type", groups.Type)
   Group.link("@type.builtin", groups.Type)
   Group.link("@type.qualifier", groups.Builtin)
   Group.link("@type.definition", groups.Type)
-  link("@type.javascript", "@variable")
+  hl("@type.javascript", { link = "@variable" })
 
   Group.link("@storageclass", groups.Keyword)
   Group.link("@attribute", groups.Function)
-  link("@field", "@property")
+  hl("@field", { link = "@property" })
   Group.link("@property", groups.Property)
 
   Group.new("@variable", colors.variable)

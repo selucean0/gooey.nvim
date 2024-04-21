@@ -5,7 +5,7 @@ return function(opts)
   local colors = require("colorbuddy.init").colors
   local groups = require("colorbuddy.init").groups
   local styles = require("colorbuddy.init").styles
-  local link = require("vitesse.utils").highlight_link
+  local hl = require("vitesse.util").hl
 
   -- diagnostics
   Group.new("DiagnosticError", colors.Error)
@@ -46,19 +46,19 @@ return function(opts)
   Group.new("LspInfoBorder", groups.FloatBorder)
 
   -- lsp semantic tokens
-  link("@lsp.type.comment", "@comment")
-  link("@lsp.type.enum", "@type")
-  link("@lsp.type.macro", "@constant")
-  link("@lsp.type.parameter", "@parameter")
-  link("@lsp.type.variable", "@variable")
-  link("@lsp.type.namespace", "@namespace")
-  link("@lsp.type.property", "@property")
-  link("@lsp.type.type", "@type")
-  link("@lsp.type.operator", "@operator")
-  link("@lsp.type.escapeSequence", "@string.escape")
-  link("@lsp.type.formatSpecifier", "@punctuation.special")
-  link("@lsp.type.selfKeyword", "@variable.builtin")
-  link("@lsp.typemod.enum.defaultLibrary", "@type.builtin")
-  link("@lsp.typemod.enumMember.defaultLibrary", "@constant.builtin")
-  link("@lsp.typemod.function.defaultLibrary", "@function.builtin")
+  hl("@lsp.type.comment", { link = "@comment" })
+  hl("@lsp.type.enum", { link = "@type" })
+  hl("@lsp.type.macro", { link = "@constant" })
+  hl("@lsp.type.parameter", { link = "@parameter" })
+  hl("@lsp.type.variable", { link = "@variable" })
+  hl("@lsp.type.namespace", { link = "@namespace" })
+  hl("@lsp.type.property", { link = "@property" })
+  hl("@lsp.type.type", { link = "@type" })
+  hl("@lsp.type.operator", { link = "@operator" })
+  hl("@lsp.type.escapeSequence", { link = "@string.escape" })
+  hl("@lsp.type.formatSpecifier", { link = "@punctuation.special" })
+  hl("@lsp.type.selfKeyword", { link = "@variable.builtin" })
+  hl("@lsp.typemod.enum.defaultLibrary", { link = "@type.builtin" })
+  hl("@lsp.typemod.enumMember.defaultLibrary", { link = "@constant.builtin" })
+  hl("@lsp.typemod.function.defaultLibrary", { link = "@function.builtin" })
 end

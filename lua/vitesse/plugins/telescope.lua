@@ -2,7 +2,7 @@ return function(opts, value)
   local colors = require("colorbuddy.init").colors
   local Group = require("colorbuddy.init").Group
   local groups = require("colorbuddy.init").groups
-  local link = require("vitesse.utils").highlight_link
+  local hl = require("vitesse.util").hl
   local normal = value.normal
 
   Group.new("TelescopeMatching", colors.orange, groups.Special, groups.Special, groups.Special)
@@ -14,7 +14,7 @@ return function(opts, value)
   Group.new("TelescopeSelectionCaret", colors.cyan)
 
   if not opts.transparent_float_background then
-    link("TelescopeNormal", "NormalFloat")
+    hl("TelescopeNormal", { link = "NormalFloat" })
     Group.new("TelescopeBorder", colors.none, colors.none)
     Group.new("TelescopeSelection", colors.none, colors.activeBackground)
     if opts.telescope_border_follow_float_background then
