@@ -1,7 +1,7 @@
 local M = {}
 
 M.colors = {
-  black = "#111111",
+  black = "#121212",
   black1 = "#252525",
   black2 = "#393939",
   black3 = "#4d4d4d",
