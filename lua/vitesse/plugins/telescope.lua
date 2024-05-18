@@ -6,7 +6,7 @@ return function(opts, value)
   local normal = value.normal
 
   Group.new("TelescopeMatching", colors.orange, groups.Special, groups.Special, groups.Special)
-  Group.new("TelescopeBorder", groups.FloatBorder) -- float border not quite dark enough, maybe that needs to change?
+  Group.link("TelescopeBorder", groups.FloatBorder) -- float border not quite dark enough, maybe that needs to change?
   Group.link("TelescopePromptBorder", groups.TelescopeBorder) -- active border lighter for clarity
   Group.new("TelescopeTitle", groups.Normal) -- separate them from the border a little, but not make them pop
   Group.new("TelescopePromptPrefix", groups.Normal) -- default is groups.Identifier

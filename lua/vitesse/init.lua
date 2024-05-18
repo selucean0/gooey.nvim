@@ -155,15 +155,17 @@ function M.load()
   Group.new("Normal", normal.fg, normal.bg)
   -- normal non-current text, means non-focus window text
   Group.new("NormalNC", normal.nc_fg, normal.bg)
+  Group.new("NormalFloat", groups.Normal, normal.float_bg)
 
   -- pum (popup menu) float
-  Group.new("Pmenu", groups.Normal, normal.float_bg) -- popup menu normal item
+  Group.link("Pmenu", groups.NormalFloat) -- popup menu normal item
   Group.new("PmenuSel", colors.activeBackground, normal.fg, styles.reverse) -- selected item
   Group.new("PmenuSbar", colors.black1, colors.none, styles.reverse)
   Group.new("PmenuThumb", colors.black2, colors.none, styles.reverse)
 
   -- be nice for this float border to be cyan if active
-  Group.new("FloatBorder", colors.lowBorder)
+  -- https://neovim.io/doc/user/news-0.10.html#_-breaking-changes
+  Group.link("FloatBorder", groups.NormalFloat)
 
   Group.new("LineNr", colors.ignored:light():light(), colors.none, styles.NONE)
   Group.new("CursorLine", colors.none, colors.lowActiveBackground, styles.NONE)
