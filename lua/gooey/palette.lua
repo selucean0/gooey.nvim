@@ -1,63 +1,65 @@
 local M = {}
 
 M.colors = {
-  black = "#121212",
-  black1 = "#252525",
-  black2 = "#393939",
-  black3 = "#4d4d4d",
-  white3 = "#c3c3c3",
-  white2 = "#d7d7d7",
-  white1 = "#ebebeb",
-  white = "#ffffff",
+	black = "#000009", -- Gooey: Black (Host)
+	black1 = "#1F222D", -- Gooey: Bright Black
+	black2 = "#1F222D", -- Gooey: Bright Black
+	black3 = "#1F222D", -- Gooey: Bright Black
 
-  ivory2 = "#eee8d5",
-  purple6 = "#5a32a3",
+	white3 = "#C0B7F9", -- Gooey: Bright Cyan
+	white2 = "#EBEEF9", -- Gooey: Foreground (Text)
+	white1 = "#EBEEF9", -- Gooey: Foreground (Text)
+	white = "#FFFFFF", -- Gooey: Bright White
+
+	ivory2 = "#EBEEF9", -- Gooey: Foreground (Text)
+	purple6 = "#6488C4", -- Gooey: Magenta (Syntax var)
 }
 
 -- dark
 M.themes = {
-  primary = "#4d9375",
+	primary = "#72CCAE",           -- Gooey: Green (Command)
 
-  foreground = "#c8c5b8",
-  activeForeground = "#bebaab",
-  secondaryForeground = "#83827d",
-  ignored = "#383837",
-  border = "#f0f0f0",
+	foreground = "#EBEEF9",        -- Gooey: Foreground (Text)
+	activeForeground = "#C0B7F9",  -- Gooey: Bright Cyan
+	secondaryForeground = "#858893", -- Gooey: White
+	ignored = "#1F222D",           -- Gooey: Bright Black
+	border = "#FFFFFF",            -- Gooey: Bright White
 
-  background = "#121212",
-  activeBackground = "#181818",
+	background = "#0D101B",        -- Gooey: Background
+	activeBackground = "#1F222D",  -- Gooey: Bright Black
 
-  lowBackground = "#222222",
-  lowActiveBackground = "#292929",
-  lowBorder = "#E7E5DB",
+	lowBackground = "#0D101B",     -- Gooey: Background
+	lowActiveBackground = "#1F222D", -- Gooey: Bright Black
+	lowBorder = "#FFFFFF",         -- Gooey: Bright White
 
-  comment = "#5c6b5e",
-  string = "#c98a7d",
-  variable = "#bd976a",
-  keyword = "#4d9375",
-  number = "#4C9A91",
-  boolean = "#4d9375",
-  operator = "#cb7676",
-  func = "#80a665",
-  constant = "#c99076",
-  class = "#6893BF",
-  interface = "#5DA994",
-  type = "#5da9a7",
-  builtin = "#cb7676",
-  property = "#b8a965",
-  namespace = "#db889a",
-  punctuation = "#666666",
-  decorator = "#bd8f8f",
-  regex = "#c4704f",
+	comment = "#8D84C6",           -- Gooey: Cyan (Prompt)
+	string = "#BB4F6C",            -- Gooey: Red (Syntax string)
+	variable = "#C65E3D",          -- Gooey: Yellow (Command second)
+	keyword = "#72CCAE",           -- Gooey: Green (Command)
+	number = "#58B6CA",            -- Gooey: Blue (Path)
+	boolean = "#72CCAE",           -- Gooey: Green (Command)
+	operator = "#EE829F",          -- Gooey: Bright Red (Command error)
+	func = "#A5FFE1",              -- Gooey: Bright Green (Exec)
+	constant = "#F99170",          -- Gooey: Bright Yellow
+	class = "#58B6CA",             -- Gooey: Blue (Path)
+	interface = "#72CCAE",         -- Gooey: Green (Command)
+	type = "#8BE9FD",              -- Gooey: Bright Blue (Folder)
+	builtin = "#EE829F",           -- Gooey: Bright Red (Command error)
+	property = "#97BBF7",          -- Gooey: Bright Magenta
+	namespace = "#C0B7F9",         -- Gooey: Bright Cyan
+	punctuation = "#858893",       -- Gooey: White
+	decorator = "#C65E3D",         -- Gooey: Yellow (Command second)
+	regex = "#C65E3D",             -- Gooey: Yellow (Command second)
 
-  -- colors
-  green = "#4d9375",
-  cyan = "#5eaab5",
-  blue = "#6394bf",
-  red = "#cb7676",
-  orange = "#d4976c",
-  yellow = "#e6cc77",
-  magenta = "#d9739f",
+	-- colors
+	green = "#72CCAE", -- Gooey: Green (Command)
+	cyan = "#8D84C6",  -- Gooey: Cyan (Prompt)
+	blue = "#58B6CA",  -- Gooey: Blue (Path)
+	red = "#BB4F6C",   -- Gooey: Red (Syntax string)
+	orange = "#C65E3D", -- Gooey: Yellow (Command second)
+	yellow = "#F99170", -- Gooey: Bright Yellow
+	magenta = "#6488C4", -- Gooey: Magenta (Syntax var)
 }
 
 return M
+
