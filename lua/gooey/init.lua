@@ -140,14 +140,14 @@ function M.load()
 		fg = colors.baseForeground,
 		bg = colors.baseBackground,
 		nc_fg = colors.baseForeground,
-		float_bg = colors.lowBackground,
+		float_bg = colors.lowBackgroundContrast,
 	}
 
 	if opts.transparent_background then
-		normal.bg = colors.none
+		normal.bg = nil
 	end
 	if opts.transparent_float_background then
-		normal.float_bg = colors.none
+		normal.float_bg = nil
 	end
 	if opts.dim_nc then
 		normal.nc_fg = colors.secondaryForeground

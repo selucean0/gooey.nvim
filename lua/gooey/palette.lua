@@ -29,6 +29,7 @@ M.themes = {
 	activeBackground = "#1F222D",  -- Gooey: Bright Black
 
 	lowBackground = "#0D101B",     -- Gooey: Background
+	lowBackgroundContrast = "#040810",
 	lowActiveBackground = "#1F222D", -- Gooey: Bright Black
 	lowBorder = "#FFFFFF",         -- Gooey: Bright White
 
@@ -62,4 +63,3 @@ M.themes = {
 }
 
 return M
-
